@@ -1,8 +1,8 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Header from './components/header/header';
-import { UserList } from './components/user-list.tsx/user-list';
-import { nameList } from './components/user-list.tsx/user.interface';
+import { UserList } from './components/user-list/user-list';
+import { nameList } from './components/user-list/user.interface';
 
 function App() {
   return (
