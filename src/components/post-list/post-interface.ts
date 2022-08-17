@@ -9,6 +9,7 @@ export interface InnerModel {
   Nation: string;
   tags: string;
   text: string;
+  publishDate: number
   owner: {
     firstName: string
     lastName: string

@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 import { api } from "../interceptor/api";
 import Paper from '@mui/material/Paper';
 import { InnerModel, OuterModel } from "./post-interface";
+import moment from "moment";
 
 function PostList() {
   const [data, setData] = React.useState<InnerModel[]>([]);
@@ -26,6 +27,7 @@ function PostList() {
             <TableCell>Tags</TableCell>
             <TableCell>FirstName</TableCell>
             <TableCell>LastName</TableCell>
+            <TableCell>Publish Date</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -36,6 +38,7 @@ function PostList() {
               <TableCell >{item.tags}</TableCell>
               <TableCell >{item.owner.firstName}</TableCell>
               <TableCell >{item.owner.lastName}</TableCell>
+              <TableCell >{moment(item.publishDate).format('DD  MMMM, YYYY')}</TableCell>
             </TableRow>
           ))}
         </TableBody>
